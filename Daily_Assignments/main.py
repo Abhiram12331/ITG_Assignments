@@ -11,7 +11,7 @@ class Bank:
     def __init__(self, name, account_no, password, gmail,  balance):
         self.name = name
         self.__account_no = account_no
-        self.gmail = gmail
+        self.__gmail = gmail
         self.__password = password
         self.__balance = balance
         
@@ -105,14 +105,7 @@ class Bank:
     
     def set_balance(self, balance):
         self.__balance=balance
-
-    def get_account_no(self):
-        return self.__account_no
-
-    def get_password(self):
-        return self.__password    
    
-        
     def deposit(self, amount):
         if amount <= 0:
             raise ValueError("Amount must be positive")
